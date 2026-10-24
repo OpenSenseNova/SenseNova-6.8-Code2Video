@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150" width="1200" height="150" role="img" aria-label="SenseNova 6.8 Code2Video · Every frame is code · 把脑洞，码成片">
+  <defs>
+    <linearGradient id="w" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#2563eb"/><stop offset="0.5" stop-color="#7c3aed"/><stop offset="1" stop-color="#c026d3"/>
+    </linearGradient>
+  </defs>
+  <g opacity="0.35">
+    <path fill="url(#w)" d="M0 62 q 150.0 -18 300.0 0 t 300.0 0 q 150.0 -18 300.0 0 t 300.0 0 q 150.0 -18 300.0 0 t 300.0 0 q 150.0 -18 300.0 0 t 300.0 0 V 150 H 0 Z">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-600 0" dur="9s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <g opacity="0.55">
+    <path fill="url(#w)" d="M0 78 q 100.0 -14 200.0 0 t 200.0 0 q 100.0 -14 200.0 0 t 200.0 0 q 100.0 -14 200.0 0 t 200.0 0 q 100.0 -14 200.0 0 t 200.0 0 q 100.0 -14 200.0 0 t 200.0 0 q 100.0 -14 200.0 0 t 200.0 0 V 150 H 0 Z">
+      <animateTransform attributeName="transform" type="translate" from="-400 0" to="0 0" dur="7s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <path fill="url(#w)" d="M0 96 q 75.0 -10 150.0 0 t 150.0 0 q 75.0 -10 150.0 0 t 150.0 0 q 75.0 -10 150.0 0 t 150.0 0 q 75.0 -10 150.0 0 t 150.0 0 q 75.0 -10 150.0 0 t 150.0 0 q 75.0 -10 150.0 0 t 150.0 0 q 75.0 -10 150.0 0 t 150.0 0 q 75.0 -10 150.0 0 t 150.0 0 V 150 H 0 Z">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="-300 0" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <text x="600.0" y="132" text-anchor="middle" fill="#ffffff" style="font-family:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif;font-size:22px;font-weight:600;letter-spacing:1px">SenseNova 6.8 Code2Video · Every frame is code · 把脑洞，码成片</text>
+</svg>

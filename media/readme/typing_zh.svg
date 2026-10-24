@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 64" width="900" height="64" role="img" aria-label="用代码，做数学科普 / 剪纸动画 / 等距插画 / 字体动效 / 数据可视化 / 角色动画 / 产品宣传片">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#3b82f6"/><stop offset="0.55" stop-color="#7c5cf6"/><stop offset="1" stop-color="#c026d3"/>
+    </linearGradient>
+    <style>
+      text { font-family: 'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',sans-serif; font-size: 28px; }
+      .pre { fill: #8b949e; font-weight: 500; }
+      .hot { fill: url(#g); font-weight: 700; }
+    </style>
+  </defs>
+  <g visibility="visible">
+    <animate attributeName="visibility" values="visible;hidden" keyTimes="0;0.1429" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+    <clipPath id="c0"><rect x="458" y="0" height="64" width="0">
+      <animate attributeName="width" values="28;56;84;112;84;56;28;0" keyTimes="0;0.0136;0.0271;0.0407;0.1171;0.1223;0.1274;0.1326" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect></clipPath>
+    <text x="318" y="42" class="pre">用代码，做</text>
+    <text x="458" y="42" class="hot" clip-path="url(#c0)">数学科普</text>
+    <rect y="16" width="3" height="34" rx="1.5" fill="url(#g)" x="458">
+      <animate attributeName="x" values="486;514;542;570;542;514;486;458" keyTimes="0;0.0136;0.0271;0.0407;0.1171;0.1223;0.1274;0.1326" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="0.9s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g visibility="hidden">
+    <animate attributeName="visibility" values="hidden;visible;hidden" keyTimes="0;0.1429;0.2857" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+    <clipPath id="c1"><rect x="458" y="0" height="64" width="0">
+      <animate attributeName="width" values="0;28;56;84;112;84;56;28;0" keyTimes="0;0.1429;0.1564;0.17;0.1836;0.26;0.2651;0.2703;0.2754" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect></clipPath>
+    <text x="318" y="42" class="pre">用代码，做</text>
+    <text x="458" y="42" class="hot" clip-path="url(#c1)">剪纸动画</text>
+    <rect y="16" width="3" height="34" rx="1.5" fill="url(#g)" x="458">
+      <animate attributeName="x" values="458;486;514;542;570;542;514;486;458" keyTimes="0;0.1429;0.1564;0.17;0.1836;0.26;0.2651;0.2703;0.2754" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="0.9s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g visibility="hidden">
+    <animate attributeName="visibility" values="hidden;visible;hidden" keyTimes="0;0.2857;0.4286" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+    <clipPath id="c2"><rect x="458" y="0" height="64" width="0">
+      <animate attributeName="width" values="0;28;56;84;112;84;56;28;0" keyTimes="0;0.2857;0.2993;0.3129;0.3264;0.4029;0.408;0.4131;0.4183" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect></clipPath>
+    <text x="318" y="42" class="pre">用代码，做</text>
+    <text x="458" y="42" class="hot" clip-path="url(#c2)">等距插画</text>
+    <rect y="16" width="3" height="34" rx="1.5" fill="url(#g)" x="458">
+      <animate attributeName="x" values="458;486;514;542;570;542;514;486;458" keyTimes="0;0.2857;0.2993;0.3129;0.3264;0.4029;0.408;0.4131;0.4183" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="0.9s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g visibility="hidden">
+    <animate attributeName="visibility" values="hidden;visible;hidden" keyTimes="0;0.4286;0.5714" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+    <clipPath id="c3"><rect x="458" y="0" height="64" width="0">
+      <animate attributeName="width" values="0;28;56;84;112;84;56;28;0" keyTimes="0;0.4286;0.4421;0.4557;0.4693;0.5457;0.5509;0.556;0.5611" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect></clipPath>
+    <text x="318" y="42" class="pre">用代码，做</text>
+    <text x="458" y="42" class="hot" clip-path="url(#c3)">字体动效</text>
+    <rect y="16" width="3" height="34" rx="1.5" fill="url(#g)" x="458">
+      <animate attributeName="x" values="458;486;514;542;570;542;514;486;458" keyTimes="0;0.4286;0.4421;0.4557;0.4693;0.5457;0.5509;0.556;0.5611" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="0.9s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g visibility="hidden">
+    <animate attributeName="visibility" values="hidden;visible;hidden" keyTimes="0;0.5714;0.7143" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+    <clipPath id="c4"><rect x="444" y="0" height="64" width="0">
+      <animate attributeName="width" values="0;28;56;84;112;140;112;84;56;28;0" keyTimes="0;0.5714;0.5823;0.5931;0.604;0.6149;0.6886;0.6927;0.6968;0.7009;0.705" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect></clipPath>
+    <text x="304" y="42" class="pre">用代码，做</text>
+    <text x="444" y="42" class="hot" clip-path="url(#c4)">数据可视化</text>
+    <rect y="16" width="3" height="34" rx="1.5" fill="url(#g)" x="444">
+      <animate attributeName="x" values="444;472;500;528;556;584;556;528;500;472;444" keyTimes="0;0.5714;0.5823;0.5931;0.604;0.6149;0.6886;0.6927;0.6968;0.7009;0.705" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="0.9s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g visibility="hidden">
+    <animate attributeName="visibility" values="hidden;visible;hidden" keyTimes="0;0.7143;0.8571" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+    <clipPath id="c5"><rect x="458" y="0" height="64" width="0">
+      <animate attributeName="width" values="0;28;56;84;112;84;56;28;0" keyTimes="0;0.7143;0.7279;0.7414;0.755;0.8314;0.8366;0.8417;0.8469" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect></clipPath>
+    <text x="318" y="42" class="pre">用代码，做</text>
+    <text x="458" y="42" class="hot" clip-path="url(#c5)">角色动画</text>
+    <rect y="16" width="3" height="34" rx="1.5" fill="url(#g)" x="458">
+      <animate attributeName="x" values="458;486;514;542;570;542;514;486;458" keyTimes="0;0.7143;0.7279;0.7414;0.755;0.8314;0.8366;0.8417;0.8469" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="0.9s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g visibility="hidden">
+    <animate attributeName="visibility" values="hidden;visible;hidden" keyTimes="0;0.8571;1" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+    <clipPath id="c6"><rect x="444" y="0" height="64" width="0">
+      <animate attributeName="width" values="0;28;56;84;112;140;112;84;56;28;0" keyTimes="0;0.8571;0.868;0.8789;0.8897;0.9006;0.9743;0.9784;0.9825;0.9866;0.9907" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect></clipPath>
+    <text x="304" y="42" class="pre">用代码，做</text>
+    <text x="444" y="42" class="hot" clip-path="url(#c6)">产品宣传片</text>
+    <rect y="16" width="3" height="34" rx="1.5" fill="url(#g)" x="444">
+      <animate attributeName="x" values="444;472;500;528;556;584;556;528;500;472;444" keyTimes="0;0.8571;0.868;0.8789;0.8897;0.9006;0.9743;0.9784;0.9825;0.9866;0.9907" dur="19.6s" calcMode="discrete" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="0.9s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
