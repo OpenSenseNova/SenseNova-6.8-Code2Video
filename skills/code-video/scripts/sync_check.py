@@ -5,15 +5,32 @@ EVENTS.json: [{"t": 1.20, "name": "triangle1.land"}, ...]  (or {"events": [...]}
 events with "silent": true are skipped.
 Prints, per event, the nearest clear onset within the window and its offset in ms; exits 1 if more than 10% are off by > 1 frame.
 """
+import argparse
 import json, subprocess, sys
 import numpy as np
 
-args = sys.argv[1:]
-if len(args) < 2: sys.exit(__doc__)
-f, ev_path = args[0], args[1]
-fps = float(args[args.index("--fps") + 1]) if "--fps" in args else 30.0
-win = float(args[args.index("--window") + 1]) if "--window" in args else 0.15
-thr = float(args[args.index("--thr") + 1]) if "--thr" in args else 0.7   # lower it for very quiet effects
+def positive_number(value):
+    number = float(value)
+    if not np.isfinite(number) or number <= 0:
+        raise argparse.ArgumentTypeError("must be finite and positive")
+    return number
+
+
+parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+parser.add_argument("video")
+parser.add_argument("events")
+parser.add_argument("--fps", type=positive_number, default=30.0)
+parser.add_argument("--window", type=positive_number, default=0.15)
+parser.add_argument("--thr", type=positive_number, default=0.7)
+args = parser.parse_args()
+f, ev_path = args.video, args.events
+fps, win, thr = args.fps, args.window, args.thr
+
+# Validate the derived tolerance before decoding audio.
+frame = 1 / fps
+tolerance_ms = frame * 1000 + 5
+if not np.isfinite(frame) or not np.isfinite(tolerance_ms):
+    parser.error("--fps is too small: frame duration and tolerance must be finite")
 SR = 48000
 
 raw = subprocess.run(["ffmpeg", "-v", "error", "-i", f, "-vn", "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"], capture_output=True).stdout
@@ -33,7 +50,7 @@ times = np.arange(len(flux)) * hop / SR
 
 events = json.load(open(ev_path))
 events = events.get("events", events) if isinstance(events, dict) else events
-frame = 1 / fps; rows = []; bad = 0
+rows = []; bad = 0
 for e in events:
     if e.get("silent"): continue
     t = float(e["t"])
@@ -47,7 +64,7 @@ for e in events:
         rows.append((e.get("name", ""), t, None, None)); bad += 1; continue
     i = min(peaks, key=lambda k: abs(times[k] - t))                  # nearest clear onset
     o = times[i]; d = (o - t) * 1000
-    rows.append((e.get("name", ""), t, o, d)); bad += abs(d) > frame * 1000 + 5
+    rows.append((e.get("name", ""), t, o, d)); bad += abs(d) > tolerance_ms
 print(f"{'event':28s} {'t':>8s} {'onset':>8s} {'offset ms':>10s}")
 for name, t, o, d in rows:
     print(f"{name[:28]:28s} {t:8.3f} {'-' if o is None else f'{o:8.3f}':>8s} {'MISSING' if d is None else f'{d:+10.0f}':>10s}")
