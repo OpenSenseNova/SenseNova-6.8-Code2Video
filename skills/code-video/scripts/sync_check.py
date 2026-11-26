@@ -25,6 +25,12 @@ parser.add_argument("--thr", type=positive_number, default=0.7)
 args = parser.parse_args()
 f, ev_path = args.video, args.events
 fps, win, thr = args.fps, args.window, args.thr
+
+# Validate the derived tolerance before decoding audio.
+frame = 1 / fps
+tolerance_ms = frame * 1000 + 5
+if not np.isfinite(frame) or not np.isfinite(tolerance_ms):
+    parser.error("--fps is too small: frame duration and tolerance must be finite")
 SR = 48000
 
 raw = subprocess.run(["ffmpeg", "-v", "error", "-i", f, "-vn", "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"], capture_output=True).stdout
@@ -44,7 +50,7 @@ times = np.arange(len(flux)) * hop / SR
 
 events = json.load(open(ev_path))
 events = events.get("events", events) if isinstance(events, dict) else events
-frame = 1 / fps; rows = []; bad = 0
+rows = []; bad = 0
 for e in events:
     if e.get("silent"): continue
     t = float(e["t"])
@@ -58,7 +64,7 @@ for e in events:
         rows.append((e.get("name", ""), t, None, None)); bad += 1; continue
     i = min(peaks, key=lambda k: abs(times[k] - t))                  # nearest clear onset
     o = times[i]; d = (o - t) * 1000
-    rows.append((e.get("name", ""), t, o, d)); bad += abs(d) > frame * 1000 + 5
+    rows.append((e.get("name", ""), t, o, d)); bad += abs(d) > tolerance_ms
 print(f"{'event':28s} {'t':>8s} {'onset':>8s} {'offset ms':>10s}")
 for name, t, o, d in rows:
     print(f"{name[:28]:28s} {t:8.3f} {'-' if o is None else f'{o:8.3f}':>8s} {'MISSING' if d is None else f'{d:+10.0f}':>10s}")
